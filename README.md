@@ -1,1 +1,2 @@
-# asp.net-core_start
+asp.net core项目开始模板\
+创建新项目后将本模板的部分代码稍作修改后插入即可
