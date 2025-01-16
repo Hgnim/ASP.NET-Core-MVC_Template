@@ -4,7 +4,7 @@ using YamlDotNet.Serialization.NamingConventions;
 namespace asp.net_core_start {
 	internal struct DataCore {
 		internal struct DataFiles {
-			static internal DataFile.ConfigFile config;
+			static internal DataFile.ConfigFile config=new();
 		}
 	}
 	public struct DataFile {
@@ -67,6 +67,7 @@ namespace asp.net_core_start {
 			public required int DebugOutput { get; set; }
 			public required bool UpdateConfig { get; set; }
 
+			[SetsRequiredMembers]
 			public ConfigFile() {
 				Website = new() {
 					Addr = "*",
