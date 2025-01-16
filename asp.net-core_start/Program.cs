@@ -11,12 +11,12 @@ namespace asp.net_core_start
 			if (File.Exists(FilePath.configFile)) {
 				try {
 					DataFile.ReadData();
-				} catch (Exception ex) { Console.WriteLine($"处理配置文件时出现错误，原因: {ex.Message}"); return; }
+				} catch (Exception ex) { Console.WriteLine($"澶勭悊閰嶇疆鏂囦欢鏃跺嚭鐜伴敊璇紝鍘熷洜: {ex.Message}"); return; }
 
 				if (DataCore.DataFiles.config.UpdateConfig == true) {
 					DataCore.DataFiles.config.UpdateConfig = false;
 					DataFile.SaveData();
-					Console.WriteLine("配置文件已更新，已退出服务端");
+					Console.WriteLine("閰嶇疆鏂囦欢宸叉洿鏂帮紝宸查��鍑烘湇鍔＄");
 					return;
 				}
 			}
@@ -47,7 +47,7 @@ namespace asp.net_core_start
 
 			app.MapControllerRoute(
 				name: "default",
-				pattern: "{controller=InputMsg}/{action=Index}"); // /{id?}");
+				pattern: "{controller=Main}/{action=Index}"); // /{id?}");
 
 			app.Run();
 		}
